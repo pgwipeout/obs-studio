@@ -18,7 +18,12 @@
 #pragma once
 
 #include "math-defs.h"
+
+#ifdef __aarch64__
+#include "../aarch-compat.h"
+#else
 #include <xmmintrin.h>
+#endif
 
 #ifdef __cplusplus
 extern "C" {

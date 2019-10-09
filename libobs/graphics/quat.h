@@ -20,7 +20,12 @@
 #include "../util/c99defs.h"
 #include "math-defs.h"
 #include "vec3.h"
+
+#ifdef __aarch64__
+#include "../aarch-compat.h"
+#else
 #include <xmmintrin.h>
+#endif
 
 /*
  * Quaternion math

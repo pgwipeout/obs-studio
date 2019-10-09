@@ -16,8 +16,13 @@
 ******************************************************************************/
 
 #include "format-conversion.h"
+
+#ifdef __aarch64__
+#include "../aarch-compat.h"
+#else
 #include <xmmintrin.h>
 #include <emmintrin.h>
+#endif
 
 /* ...surprisingly, if I don't use a macro to force inlining, it causes the
  * CPU usage to boost by a tremendous amount in debug builds. */

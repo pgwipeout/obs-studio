@@ -1,6 +1,10 @@
 #include "audio-repack.h"
 
+#ifdef __aarch64__
+#include <aarch-compat.h>
+#else
 #include <emmintrin.h>
+#endif
 
 int check_buffer(struct audio_repack *repack, uint32_t frame_count)
 {

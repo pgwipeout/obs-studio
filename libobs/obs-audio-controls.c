@@ -16,7 +16,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include <math.h>
+
+#ifdef __aarch64__
+#include "aarch-compat.h"
+#else
 #include <xmmintrin.h>
+#endif
 
 #include "util/threading.h"
 #include "util/bmem.h"
