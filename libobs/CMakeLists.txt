@@ -177,13 +177,13 @@ elseif(UNIX)
 	if(CMAKE_SYSTEM_PROCESSOR MATCHES "aarch64")
 		set(libobs_PLATFORM_HEADERS
 			aarch-compat.h
-			util/aarch/check.h
-			util/aarch/hedley.h
-			util/aarch/mmx.h
-			util/aarch/simde-arch.h
-			util/aarch/simde-common.h
-			util/aarch/sse.h
-			util/aarch/sse2.h
+			util/simde/simde/check.h
+			util/simde/simde/hedley.h
+			util/simde/simde/x86/mmx.h
+			util/simde/simde/simde-arch.h
+			util/simde/simde/simde-common.h
+			util/simde/simde/x86/sse.h
+			util/simde/simde/x86/sse2.h
 			util/threading-posix.h)
 	else()
 		set(libobs_PLATFORM_HEADERS

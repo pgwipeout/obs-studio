@@ -16,3 +16,6 @@
 [submodule "plugins/obs-outputs/ftl-sdk"]
 	path = plugins/obs-outputs/ftl-sdk
 	url = https://github.com/Mixer/ftl-sdk.git
+[submodule "libobs/util/simde"]
+	path = libobs/util/simde
+	url = https://github.com/nemequ/simde

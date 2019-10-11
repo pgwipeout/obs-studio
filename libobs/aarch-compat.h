@@ -14,7 +14,10 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ******************************************************************************/
-#include "util/aarch/sse2.h"
+#include "util/simde/simde/x86/sse2.h"
+
+/* fixes modules using containerized build environments */
+#define SIMDE_ALIGN(alignment) __attribute__((aligned(alignment)))
 
 #define __m128 simde__m128
 #define _mm_setzero_ps simde_mm_setzero_ps
